@@ -212,7 +212,7 @@ export default function ODTGHomePage() {
               </>
             }
           />
-          <TrustItem
+          {/* <TrustItem
             icon={<PiBank size={20} />}
             label={
               <>
@@ -221,7 +221,7 @@ export default function ODTGHomePage() {
                 Federal Contracting
               </>
             }
-          />
+          /> */}
           <TrustItem
             icon={<PiPersonArmsSpread size={20} />}
             label={
@@ -444,9 +444,9 @@ export default function ODTGHomePage() {
                 <strong>
                   Teresa Norton, Principal &amp; Managing Director
                 </strong>{" "}
-                — a U.S. Navy veteran with more than 25 years of experience
-                helping federal organizations manage records, document
-                processes, and modernize how work gets done.
+                — an experienced U.S. Navy veteran that helps organizations
+                manage records, document processes, and modernize how work gets
+                done.
               </p>
               <p className="odtg-about__p">
                 For 15 years she ran an{" "}
@@ -574,7 +574,7 @@ export default function ODTGHomePage() {
       </section>
 
       {/* ============ FOOTER ============ */}
-      <Footer/>
+      <Footer />
     </div>
   );
 }

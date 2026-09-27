@@ -6,7 +6,7 @@ import Link from "next/link";
 const NAV_LINKS = [
   { href: "#what", label: "What We Do" },
   { href: "#how", label: "How It Works" },
-  { href: "#who", label: "Who We Work With" },
+  { href: "#who", label: "Who We Service" },
   { href: "#about", label: "About" },
 ];
 
@@ -209,18 +209,7 @@ padding-top: 0.2rem;
   .odtg-nav__links { display: none; }
   .odtg-nav__cta { display: none; }      /* CTA lives in the drawer on mobile */
   .odtg-nav__toggle { display: inline-flex; }
+  .odtg-logo { width: 75px; }
 }
 
-/*------ From Page ------*/
-.odtg-nav {
-  position: sticky; top: 0; z-index: 50;
-  background: rgba(10,27,46,.72); backdrop-filter: blur(10px);
-  border-bottom: 1px solid transparent; transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
-}
-.odtg-nav--scrolled { background: rgba(10,27,46,.96); border-bottom-color: rgba(255,255,255,.08); box-shadow: 0 6px 24px rgba(0,0,0,.35); }
-
-.odtg-nav__links { display: flex; gap: 30px; font-size: 14.5px; font-weight: 500; }
-
-.odtg-nav__links a:hover { color: #fff; }
-.odtg-nav__links a:hover::after { width: 100%; }
 `;
