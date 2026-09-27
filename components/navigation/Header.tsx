@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { PiArrowRight, PiList, PiX } from "react-icons/pi";
 import Image from "next/image";
+import Link from "next/link";
 
 const NAV_LINKS = [
   { href: "#what", label: "What We Do" },
@@ -37,40 +38,50 @@ export default function ODTGHeader() {
       <style>{styles}</style>
 
       <nav className={`odtg-nav ${scrolled ? "odtg-nav--scrolled" : ""}`}>
-        <div className="odtg-container odtg-nav__inner">
-          <a href="#top" className="odtg-logo align-center flex" onClick={() => setOpen(false)}>
-            <Image
-              src="/odtg-logo-reverse.png"
-              alt="ODTG — Optimal Digital Transformation Group"
-              className="odtg-logo__img"
-              height={100}
-              width={100}
-            />{" "}
-            {/* <div className="">
-              <h1 className="font-bold text-base text-xs md:text-xl ">
-                Optimal{" "}
-                <span className="text-(--gold)">
-                  Digital Transormation Group
-                </span>
-              </h1>
-              <small className="text-muted text-(--text-tiny)">
-                Innovating with Structure. Modernizing with Confidence.
-              </small>
-            </div> */}
-          </a>
-
-          {/* Desktop links */}
-          <div className="odtg-nav__links">
-            {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href}>
-                {l.label}
-              </a>
-            ))}
+        <div className="odtg-nav-container odtg-nav__inner flex center">
+          <div className="odtg-nav__left">
+            <Link
+              href="#top"
+              className="odtg-logo "
+              onClick={() => setOpen(false)}
+            >
+              <Image
+                src="/odtg-icon.png"
+                alt="ODTG — Optimal Digital Transformation Group"
+                className="odtg-logo__img"
+                height={100}
+                width={100}
+              />{" "}
+            </Link>
           </div>
 
-          <a href="#contact" className="odtg-btn odtg-btn--gold odtg-nav__cta">
-            Start a Conversation <PiArrowRight size={16} />
-          </a>
+          <div className="my-4 leading-3">
+            <h1 className="font-bold text-base text-xs md:text-2xl leading-3">
+              Optimal{" "}
+              <div className="py-0 my-0 leading-none">
+                <span className="text-(--gold) text-sm leading-none">
+                  Digital Transormation Group
+                </span>
+              </div>
+            </h1>
+            <small className="text-muted text-xs">
+                Innovating with Structure. Modernizing with Confidence.
+              </small>
+          </div>
+          {/* Desktop links */}
+          <div className="odtg-nav__links center ">
+            {NAV_LINKS.map((l) => (
+              <Link key={l.href} href={l.href}>
+                {l.label}
+              </Link>
+            ))}
+            <Link
+              href="#contact"
+              className="odtg-btn odtg-btn--gold odtg-nav__cta"
+            >
+              Start a Conversation <PiArrowRight size={16} />
+            </Link>
+          </div>
 
           {/* Hamburger — only shows on mobile via CSS */}
           <button
@@ -95,18 +106,18 @@ export default function ODTGHeader() {
         <div className="odtg-mobile__panel">
           <nav className="odtg-mobile__links">
             {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
-          <a
+          <Link
             href="#contact"
             className="odtg-btn odtg-btn--gold odtg-mobile__cta"
             onClick={() => setOpen(false)}
           >
             Start a Conversation <PiArrowRight size={16} />
-          </a>
+          </Link>
         </div>
       </div>
     </>
@@ -116,8 +127,8 @@ export default function ODTGHeader() {
 const styles = `
 :root { --navy-900: #0A1B2E; --gold: #E0A93C; }
 
-.odtg-container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 28px; }
-
+.odtg-nav-container {
+max-width: 1180px; margin: 0 auto; padding: 0 28px;}
 .odtg-btn {
   display: inline-flex; align-items: center; gap: 8px;
   font-weight: 600; font-size: 15px; line-height: 1;
@@ -131,7 +142,7 @@ const styles = `
 .odtg-btn:hover svg { transform: translateX(3px); }
 
 .odtg-logo { display: inline-flex; align-items: center; text-decoration: none; }
-.odtg-logo__img { height: 50px; width: 13rem; display: block; }
+.odtg-logo__img { height: 4.5rem; width: auto; display: block; }
 .odtg-logo__icon { height: 50px; width: auto; display: block; }
 
 .odtg-nav {
@@ -141,15 +152,18 @@ const styles = `
   transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 .odtg-nav--scrolled { background: rgba(10,27,46,.96); border-bottom-color: rgba(255,255,255,.08); box-shadow: 0 6px 24px rgba(0,0,0,.35); }
-.odtg-nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 74px; }
+ 
 
-.odtg-nav__links { display: flex; gap: 30px; font-size: 14.5px; font-weight: 500; margin-left: auto; }
-.odtg-nav__links a { color: rgba(255,255,255,.82); position: relative; padding: 6px 0; text-decoration: none; transition: color .2s ease; }
-.odtg-nav__links a::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: var(--gold); transition: width .25s ease; }
+.odtg-nav__links { display: flex; gap: 30px; font-size: 14.5px; font-weight: 500; margin-left: auto; align-items: center; justify-content: space-between; gap: 20px; height: 74px; }
+.odtg-nav__links a:not(:last-child) { color: rgba(255,255,255,.82); position: relative; padding: 6px 0; text-decoration: none; transition: color .2s ease; }
+.odtg-nav__links a::after:not(:last-child)  { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: var(--gold); transition: width .25s ease; }
 .odtg-nav__links a:hover { color: #fff; }
 .odtg-nav__links a:hover::after { width: 100%; }
+.odtg-nav__left{
+padding-top: 0.2rem;
+}
 
-.odtg-nav__cta { margin-left: 4px; }
+.odtg-nav__cta { margin-left: 4px; height: 2.75rem; }
 
 .odtg-nav__toggle {
   display: none; align-items: center; justify-content: center;
@@ -196,4 +210,17 @@ const styles = `
   .odtg-nav__cta { display: none; }      /* CTA lives in the drawer on mobile */
   .odtg-nav__toggle { display: inline-flex; }
 }
+
+/*------ From Page ------*/
+.odtg-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(10,27,46,.72); backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent; transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.odtg-nav--scrolled { background: rgba(10,27,46,.96); border-bottom-color: rgba(255,255,255,.08); box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+
+.odtg-nav__links { display: flex; gap: 30px; font-size: 14.5px; font-weight: 500; }
+
+.odtg-nav__links a:hover { color: #fff; }
+.odtg-nav__links a:hover::after { width: 100%; }
 `;

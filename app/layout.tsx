@@ -15,6 +15,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "OTDG",
   description: "Optimize your workflow with Optimal Digtial",
+  openGraph: {
+    title: "ODTG — Optimal Digital Transformation Group",
+    description:
+      "Service-Disabled Veteran-Owned advisory firm helping federal agencies, contractors, and financial practices fix how work gets done — workflow redesign, records management, and Section 508 compliance.",
+    images: [
+      {
+        url: "/og-image.jpg", // 1200×630, drop in /public
+        width: 1200,
+        height: 630,
+        alt: "ODTG logo with the tagline 'Innovating with Structure. Modernizing with Confidence",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

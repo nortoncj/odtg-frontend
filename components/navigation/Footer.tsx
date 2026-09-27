@@ -5,6 +5,7 @@ import { PiMedal, PiBank, PiAnchor } from 'react-icons/pi'
 export default function Footer() {
   return (
     <footer className="odtg-footer">
+      <style>{styles}</style>
       <div className="odtg-container odtg-footer__inner">
         <a href="#top" className="odtg-logo">
           <Image
@@ -20,8 +21,8 @@ export default function Footer() {
               <span className="text-(--gold)">Digital Transormation Group</span>
             </h1>
             <small className="text-muted text-(--text-tiny)">
-                Innovating with Structure. Modernizing with Confidence.
-              </small>
+              Innovating with Structure. Modernizing with Confidence.
+            </small>
           </div>
         </a>
         <div className="odtg-footer__links">
@@ -55,3 +56,17 @@ export default function Footer() {
     </footer>
   );
 }
+
+const styles = `
+.odtg-footer { background: var(--navy-900); border-top: 1px solid rgba(255,255,255,.07); padding: 40px 0 26px; }
+.odtg-footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.07); }
+.odtg-footer__links { display: flex; gap: 24px; font-size: 14px; }
+.odtg-footer__links a { color: rgba(255,255,255,.72); transition: color .2s ease; }
+.odtg-footer__links a:hover { color: var(--gold); }
+.odtg-footer__badges { display: flex; gap: 18px; flex-wrap: wrap; }
+.odtg-footer__badges span { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: rgba(255,255,255,.6); }
+.odtg-footer__badges svg { color: var(--gold); }
+.odtg-footer__base { display: flex; align-items: center; justify-content: space-between; padding-top: 22px; font-size: 12.5px; color: rgba(255,255,255,.5); flex-wrap: wrap; gap: 12px; }
+.odtg-footer__legal { display: flex; gap: 18px; }
+.odtg-footer__legal a:hover { color: var(--gold); }
+`;
