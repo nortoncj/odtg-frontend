@@ -293,7 +293,7 @@ export default function ODTGHomePage() {
         <div className="odtg-container">
           <Reveal>
             <p className="odtg-eyebrow odtg-eyebrow--center odtg-eyebrow--gold">
-              Who We Work With
+              Who We Serve
             </p>
             <h2 className="odtg-h2 odtg-center">
               Two worlds. The same underlying problem.

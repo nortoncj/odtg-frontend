@@ -12,7 +12,7 @@ export default function Footer() {
             height={100}
             src="/odtg-icon.png"
             alt="ODTG — Optimal Digital Transformation Group"
-            className="odtg-logo__img"
+            className="odtg-logo__icon"
           />
           <div className="">
             <h1 className="font-bold text-base text-xs md:text-xl ">

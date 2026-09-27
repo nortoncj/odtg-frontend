@@ -40,23 +40,23 @@ export default function ODTGHeader() {
         <div className="odtg-container odtg-nav__inner">
           <a href="#top" className="odtg-logo align-center flex" onClick={() => setOpen(false)}>
             <Image
-              src="/odtg-icon.png"
+              src="/odtg-logo-reverse.png"
               alt="ODTG — Optimal Digital Transformation Group"
               className="odtg-logo__img"
               height={100}
               width={100}
             />{" "}
-            <div className="">
+            {/* <div className="">
               <h1 className="font-bold text-base text-xs md:text-xl ">
                 Optimal{" "}
                 <span className="text-(--gold)">
                   Digital Transormation Group
                 </span>
               </h1>
-              {/* <small className="text-muted text-(--text-tiny)">
+              <small className="text-muted text-(--text-tiny)">
                 Innovating with Structure. Modernizing with Confidence.
-              </small> */}
-            </div>
+              </small>
+            </div> */}
           </a>
 
           {/* Desktop links */}
@@ -131,7 +131,8 @@ const styles = `
 .odtg-btn:hover svg { transform: translateX(3px); }
 
 .odtg-logo { display: inline-flex; align-items: center; text-decoration: none; }
-.odtg-logo__img { height: 42px; width: auto; display: block; }
+.odtg-logo__img { height: 50px; width: 13rem; display: block; }
+.odtg-logo__icon { height: 50px; width: auto; display: block; }
 
 .odtg-nav {
   position: sticky; top: 0; z-index: 50;
