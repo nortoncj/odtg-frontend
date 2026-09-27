@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import {
   PiMapTrifold,
   PiMagnifyingGlass,
@@ -28,6 +29,7 @@ import {
   PiMedal,
 } from "react-icons/pi";
 import Header from "@/components/navigation/Header";
+import Footer from "@/components/navigation/Footer";
 
 /**
  * ODTG — Optimal Digital Transformation Group
@@ -271,7 +273,10 @@ export default function ODTGHomePage() {
                   "SOP & Process Documentation",
                   "Performance Measurement",
                   "Regulatory & Audit Readiness",
-                  "Section 508 Accessibility",
+                  "Business Analysis",
+                  "Process Modeling",
+                  "Project/Program Support",
+                  "Section 508 Accessibility Compliance",
                 ].map((c) => (
                   <span key={c} className="odtg-capabilities__item">
                     {c}
@@ -291,12 +296,12 @@ export default function ODTGHomePage() {
               Who We Work With
             </p>
             <h2 className="odtg-h2 odtg-center">
-              Different industries. Similar operational problems.
+              Two worlds. The same underlying problem.
             </h2>
             <p className="odtg-lead odtg-lead--muted odtg-center">
-              Whether the environment is regulated by policy, statute,
-              contracts, or market requirements, organizations still need work
-              to move clearly from one step to the next.
+              Whether you run a federal program or a wealth advisory practice,
+              work gets stuck in the same places: unclear processes, missing
+              documentation, and handoffs that fall through the cracks.
             </p>
           </Reveal>
 
@@ -306,13 +311,13 @@ export default function ODTGHomePage() {
                 img="/gov-capitol.jpg"
                 imgAlt="U.S. Capitol building"
                 icon={<PiBank size={22} />}
-                title="Government"
-                sub="Federal Agencies & Programs"
+                title="Federal Agencies & Contractors"
+                sub="Compliance-Driven Operations"
                 items={[
+                  "Process documentation",
+                  "Records management",
                   "Workflow modernization",
-                  "Records & information",
-                  "Accessibility",
-                  "Program operations",
+                  "Section 508 accessibility",
                 ]}
                 cta="Explore Government Advisory"
               />
@@ -322,15 +327,15 @@ export default function ODTGHomePage() {
                 img="/fin-tower.jpg"
                 imgAlt="Modern glass office tower"
                 icon={<PiShieldCheck size={22} />}
-                title="Financial Services & Insurance"
-                sub="Carriers, Agencies & Financial Institutions"
+                title="Wealth Advisors & Financial Practices"
+                sub="Practices That Run on Process"
                 items={[
-                  "Claims operations",
-                  "Underwriting operations",
-                  "Compliance & audit readiness",
-                  "Case & service operations",
+                  "Client onboarding",
+                  "Review prep",
+                  "Service requests",
+                  "Compliance documentation",
                 ]}
-                cta="Explore Financial & Insurance Advisory"
+                cta="Explore Advisory Solutions"
                 highlight
               />
             </Reveal>
@@ -383,7 +388,7 @@ export default function ODTGHomePage() {
       </section>
 
       {/* ============ OPERATIONAL CHALLENGES ============ */}
-      <section className="odtg-section odtg-section--navy">
+      {/* <section className="odtg-section odtg-section--navy">
         <div className="odtg-container">
           <Reveal>
             <p className="odtg-eyebrow odtg-eyebrow--center odtg-eyebrow--gold">
@@ -401,7 +406,7 @@ export default function ODTGHomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ============ ABOUT ============ */}
       <section id="about" className="odtg-section odtg-section--light">
@@ -418,8 +423,10 @@ export default function ODTGHomePage() {
           <div className="odtg-about">
             <Reveal className="odtg-about__photo">
               <div className="odtg-about__photo-inner">
-                <img
-                  src="/owner_headshot.png"
+                <Image
+                  height={100}
+                  width={100}
+                  src="/headshot2.jpg"
                   alt="Teresa Norton, Founder of ODTG"
                 />
               </div>
@@ -428,38 +435,67 @@ export default function ODTGHomePage() {
             <Reveal delay={80} className="odtg-about__body">
               <h3 className="odtg-about__name">Teresa Norton</h3>
               <p className="odtg-about__role">
-                U.S. Navy Veteran · Founder
+                Principal &amp; Managing
                 <br />
-                Digital Transformation &amp; Operations Advisor
+                Director
               </p>
               <p className="odtg-about__p">
-                Teresa Norton is a U.S. Navy veteran and founder of ODTG,
-                bringing more than 25 years of experience helping federal
-                organizations manage records, document processes, and improve
-                how work gets done.
+                ODTG was founded by{" "}
+                <strong>
+                  Teresa Norton, Principal &amp; Managing Director
+                </strong>{" "}
+                — a U.S. Navy veteran with more than 25 years of experience
+                helping federal organizations manage records, document
+                processes, and modernize how work gets done.
               </p>
               <p className="odtg-about__p">
-                Before ODTG, she spent 15 years running an SBA 8(a)-certified
-                federal records management firm, working inside the same
-                compliance-driven environments clients navigate every day.
+                For 15 years she ran an{" "}
+                <strong>
+                  SBA 8(a)-certified federal records management firm
+                </strong>
+                , working inside the same compliance-driven environments our
+                federal clients navigate every day. That means we understand
+                federal requirements — records management, process
+                documentation, and Section 508 accessibility — from the inside,
+                not from a textbook.
+              </p>
+              <p className="odtg-about__p">
+                Teresa also spent several years as a{" "}
+                <strong>registered representative</strong>
+                in financial services, giving ODTG firsthand knowledge of how
+                advisory practices operate: client onboarding workflows,
+                documentation demands, and the compliance pressure behind every
+                relationship.
               </p>
               <p className="odtg-about__p odtg-about__p--em">
-                That experience translates beyond government. The discipline
-                required to model regulated, documentation-heavy operations,
-                identify workflow friction, and create processes people actually
-                follow is equally valuable in insurance and financial services.
+                Clients hire ODTG for judgment, experience, credibility, and
+                methodology — and for our ability to understand their problems
+                in their own language, then translate them into workflows that
+                actually work.
               </p>
             </Reveal>
 
             <Reveal delay={160} className="odtg-glance">
+              {/* Cert Image */}
+              <Image
+                className="flex center mx-auto pb-6"
+                src="/sdvob.png"
+                alt=""
+                height={100}
+                width={100}
+              />
               <p className="odtg-glance__label">At a Glance</p>
               <dl className="odtg-glance__list">
                 {[
                   ["Structure", "LLC, Founder-Led"],
-                  ["Certification", "SDVOSB"],
+                  ["Principal", "Teresa Norton"],
+                  ["SBA Certification", "SDVOSB · WOSB · VOSB"],
                   ["Founder", "U.S. Navy Veteran"],
-                  ["Federal Experience", "25+ Years"],
-                  ["Focus", "Federal & Commercial"],
+                  ["Prior Firm", "8(a) Certified, 15 Years"],
+                  ["Markets", "Federal & Financial Services"],
+                  ["UEI", "VV97GEJU6616"],
+                  ["CAGE", "22N27"],
+                  ["SAM.gov", "Active"],
                   ["Based In", "Pinellas County, FL"],
                 ].map(([k, v]) => (
                   <div key={k} className="odtg-glance__row">
@@ -474,7 +510,7 @@ export default function ODTGHomePage() {
       </section>
 
       {/* ============ WHY ODTG ============ */}
-      <section className="odtg-section odtg-section--cream odtg-section--tight">
+      {/* <section className="odtg-section odtg-section--cream odtg-section--tight">
         <div className="odtg-container">
           <Reveal>
             <p className="odtg-eyebrow odtg-eyebrow--center odtg-eyebrow--gold">
@@ -492,14 +528,19 @@ export default function ODTGHomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ============ FINAL CTA ============ */}
       <section id="contact" className="odtg-cta">
         <div className="odtg-cta__glow" />
         <div className="odtg-container odtg-cta__inner">
           <div className="odtg-cta__media">
-            <img src="/stock-hero.jpg" alt="An ODTG advisor ready to help" />
+            <Image
+              src="/stock-hero.jpg"
+              alt="An ODTG advisor ready to help"
+              height={100}
+              width={100}
+            />
           </div>
           <div className="odtg-cta__body">
             <div className="odtg-cta__copy">
@@ -515,7 +556,7 @@ export default function ODTGHomePage() {
                   <PiEnvelope size={16} /> info@odtg.example
                 </span>
                 <span>
-                  <PiPhone size={16} /> (000) 000-0000
+                  <PiPhone size={16} /> (727) 243-7226
                 </span>
                 <span>
                   <PiMapPin size={16} /> Pinellas County, FL
@@ -533,43 +574,7 @@ export default function ODTGHomePage() {
       </section>
 
       {/* ============ FOOTER ============ */}
-      <footer className="odtg-footer">
-        <div className="odtg-container odtg-footer__inner">
-          <a href="#top" className="odtg-logo">
-            <img
-              src="/odtg_nav-logo.png"
-              alt="ODTG — Optimal Digital Transformation Group"
-              className="odtg-logo__img"
-            />
-          </a>
-          <div className="odtg-footer__links">
-            <a href="#what">What We Do</a>
-            <a href="#how">How It Works</a>
-            <a href="#who">Who We Work With</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </div>
-          <div className="odtg-footer__badges">
-            <span>
-              <PiMedal size={14} /> SDVOSB
-            </span>
-            <span>
-              <PiAnchor size={14} /> U.S. Navy Veteran
-            </span>
-            <span>
-              <PiBank size={14} /> Federal & Commercial
-            </span>
-          </div>
-        </div>
-        <div className="odtg-container odtg-footer__base">
-          <span>© 2026 ODTG, LLC.</span>
-          <div className="odtg-footer__legal">
-            <a href="#">Privacy</a>
-            <a href="#">Accessibility</a>
-            <a href="#">Terms</a>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }
@@ -634,8 +639,8 @@ function ServiceCard({
   n: string;
   icon: React.ReactNode;
   title: string;
-  body: string;
-  tags: string[];
+  body?: string;
+  tags?: string[];
 }) {
   return (
     <div className="odtg-service">
@@ -646,7 +651,7 @@ function ServiceCard({
       <h3 className="odtg-service__title">{title}</h3>
       <p className="odtg-service__body">{body}</p>
       <div className="odtg-service__tags">
-        {tags.map((t) => (
+        {tags?.map((t) => (
           <span key={t}>{t}</span>
         ))}
       </div>
@@ -677,7 +682,7 @@ function IndustryCard({
     <div className={`odtg-industry ${highlight ? "odtg-industry--hl" : ""}`}>
       {img && (
         <div className="odtg-industry__media">
-          <img src={img} alt={imgAlt || ""} />
+          <Image src={img} alt={imgAlt || ""} width={100} height={100} />
           <span className="odtg-industry__media-veil" />
         </div>
       )}
@@ -772,29 +777,29 @@ const SERVICES = [
     n: "01",
     icon: <PiFlowArrow size={24} />,
     title: "Workflow Analysis & Redesign",
-    body: "Map how work moves today, find where it breaks, and design a better future state.",
-    tags: ["Claims", "Case Management", "Records", "Program Workflows"],
+    body: "Through process modeling and workflow mapping, we document how work actually moves through your organization today. Identitify where it slows down or breaks and design a better future state.",
+    // tags: ["Claims", "Case Management", "Records", "Program Workflows"],
   },
   {
     n: "02",
     icon: <PiGearSix size={24} />,
     title: "Process Improvement",
-    body: "Cut unnecessary steps, duplication, delays, and handoff problems, whether that's a claims workflow, an underwriting queue, or a case backlog.",
-    tags: ["Claims", "Underwriting", "Case Backlogs", "Service Operations"],
+    body: "We reduce unnecessary steps, duplication, delays, and handoff problems — organizational improvement that lets your team spend time on the work, not the workaround. Cut unnecessary steps, duplication, delays, and handoff problems, whether that's a claims workflow, an underwriting queue, or a case backlog.",
+    // tags: ["Underwriting", "Case Backlogs", "Service Operations"],
   },
   {
     n: "03",
     icon: <PiUsersThree size={24} />,
     title: "Operations Advisory",
-    body: "Assess how people, processes, and systems interact, then recommend fixes you can actually implement without a system rip-and-replace.",
-    tags: ["Operating Models", "Cross-Functional Workflows", "Compliance"],
+    body: "Grounded in business analysis, we assess how your people, processes, and systems interact and recommend practical improvements you can actually implement.",
+    // tags: ["Operating Models", "Cross-Functional Workflows", "Compliance"],
   },
   {
     n: "04",
     icon: <PiClipboardText size={24} />,
     title: "Project & Program Advisory",
-    body: "Help leadership plan, prioritize, and monitor improvements so change sticks.",
-    tags: ["Transformation Programs", "Operational Initiatives", "Governance"],
+    body: "From advisory through hands-on project and program support, we help leadership structure, plan, and monitor the implementation of improvements — so change actually sticks.",
+    // tags: ["Transformation Programs", "Operational Initiatives", "Governance"],
   },
 ];
 
@@ -803,19 +808,19 @@ const STEPS = [
     n: "01",
     icon: <PiChatCircle size={22} />,
     title: "LISTEN",
-    body: "We start with a conversation. You describe what's slow, stuck, or frustrating.",
+    body: "You describe what's slow, stuck, or frustrating. We ask questions until we understand the real problem — not just the symptom.",
   },
   {
     n: "02",
     icon: <PiMagnifyingGlass size={22} />,
     title: "ASSESS",
-    body: "We map and diagnose how work flows today, where problems occur, and what it's costing you.",
+    body: "We document how work flows today, where it bottlenecks, and what it's costing you in time, rework, and missed deadlines.",
   },
   {
     n: "03",
     icon: <PiClipboardText size={22} />,
     title: "DELIVER",
-    body: "You get a practical plan. No jargon. No shelf-ware reports.",
+    body: "Clear recommendations, documented processes, and support through implementation. No jargon, no shelf-ware reports.",
   },
 ];
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { PiArrowRight, PiList, PiX } from "react-icons/pi";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { href: "#what", label: "What We Do" },
@@ -37,12 +38,25 @@ export default function ODTGHeader() {
 
       <nav className={`odtg-nav ${scrolled ? "odtg-nav--scrolled" : ""}`}>
         <div className="odtg-container odtg-nav__inner">
-          <a href="#top" className="odtg-logo" onClick={() => setOpen(false)}>
-            <img
-              src="/odtg_nav-logo.png"
+          <a href="#top" className="odtg-logo align-center flex" onClick={() => setOpen(false)}>
+            <Image
+              src="/odtg-icon.png"
               alt="ODTG — Optimal Digital Transformation Group"
               className="odtg-logo__img"
-            />
+              height={100}
+              width={100}
+            />{" "}
+            <div className="">
+              <h1 className="font-bold text-base text-xs md:text-xl ">
+                Optimal{" "}
+                <span className="text-(--gold)">
+                  Digital Transormation Group
+                </span>
+              </h1>
+              {/* <small className="text-muted text-(--text-tiny)">
+                Innovating with Structure. Modernizing with Confidence.
+              </small> */}
+            </div>
           </a>
 
           {/* Desktop links */}

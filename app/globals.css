@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+   --text-tiny: 0.125rem;
+  --text-tiny--line-height: 1.5rem; 
+  --text-tiny--letter-spacing: 0.125rem; 
+  --text-tiny--font-weight: 500; 
 }
 
 @theme inline {
