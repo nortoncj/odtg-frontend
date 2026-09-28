@@ -60,7 +60,7 @@ export default function ODTGHeader() {
               Optimal{" "}
               <div className="py-0 my-0 leading-none">
                 <span className="text-(--gold) text-sm leading-none">
-                  Digital Transormation Group
+                  Digital Transformation Group
                 </span>
               </div>
             </h1>

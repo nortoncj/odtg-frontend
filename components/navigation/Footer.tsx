@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="">
             <h1 className="font-bold text-base text-xs md:text-xl ">
               Optimal{" "}
-              <span className="text-(--gold)">Digital Transormation Group</span>
+              <span className="text-(--gold)">Digital Transformation Group</span>
             </h1>
             <small className="text-muted text-(--text-tiny)">
               Innovating with Structure. Modernizing with Confidence.
