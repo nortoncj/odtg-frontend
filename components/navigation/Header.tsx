@@ -6,7 +6,7 @@ import Link from "next/link";
 const NAV_LINKS = [
   { href: "#what", label: "What We Do" },
   { href: "#how", label: "How It Works" },
-  { href: "#who", label: "Who We Service" },
+  { href: "#who", label: "Who We Serve" },
   { href: "#about", label: "About" },
 ];
 
@@ -65,8 +65,8 @@ export default function ODTGHeader() {
               </div>
             </h1>
             <small className="text-muted text-xs">
-                Innovating with Structure. Modernizing with Confidence.
-              </small>
+              Innovating with Structure. Modernizing with Confidence.
+            </small>
           </div>
           {/* Desktop links */}
           <div className="odtg-nav__links center ">
