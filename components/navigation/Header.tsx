@@ -62,7 +62,6 @@ export default function ODTGHeader() {
                 <span className="text-(--gold) text-sm leading-none">
                   Digital Transformation Group
                 </span>
-              </div>
             </h1>
             <small className="text-muted text-xs">
               Innovating with Structure. Modernizing with Confidence.

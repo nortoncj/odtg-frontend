@@ -313,6 +313,7 @@ export default function ODTGHomePage() {
                 icon={<PiBank size={22} />}
                 title="Federal Agencies & Contractors"
                 sub="Compliance-Driven Operations"
+                text="We help agencies and contractors document processes, manage records, modernize workflows, and meet Section 508 accessibility requirements — with the perspective of a founder who ran an 8(a)-certified federal firm for 15 years"
                 items={[
                   "Process documentation",
                   "Records management",
@@ -329,6 +330,7 @@ export default function ODTGHomePage() {
                 icon={<PiShieldCheck size={22} />}
                 title="Wealth Advisors & Financial Practices"
                 sub="Practices That Run on Process"
+                text="Advisory practices lose hours to client onboarding, review prep, service requests, and compliance documentation. Having worked as a registered representative, we know the workflow behind the client relationship — and how to streamline it."
                 items={[
                   "Client onboarding",
                   "Review prep",
@@ -664,7 +666,8 @@ function IndustryCard({
   imgAlt,
   icon,
   title,
-  sub,
+    sub,
+  text,
   items,
   cta,
   highlight = false,
@@ -673,7 +676,8 @@ function IndustryCard({
   imgAlt?: string;
   icon: React.ReactNode;
   title: string;
-  sub: string;
+        sub: string;
+        text: string;
   items: string[];
   cta: string;
   highlight?: boolean;
@@ -694,12 +698,13 @@ function IndustryCard({
             <p className="odtg-industry__sub">{sub}</p>
           </div>
         </div>
-        <ul className="odtg-industry__list">
-          {items.map((it) => (
+              <ul className="odtg-industry__list">
+                  {text}
+          {/* {items.map((it) => (
             <li key={it}>
               <PiCheckCircle size={15} /> {it}
             </li>
-          ))}
+          ))} */}
         </ul>
         <a href="#contact" className="odtg-industry__cta">
           {cta} <PiArrowRight size={15} />
